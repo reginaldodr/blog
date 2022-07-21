@@ -17,6 +17,18 @@
     </item>
     
     <item>
+      <title>Teorema Fundamental do Cálculo</title>
+      <link>https://reginaldodr.github.io/blog/post/2022-07-18-tfc/</link>
+      <pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://reginaldodr.github.io/blog/post/2022-07-18-tfc/</guid>
+      <description>Teorema fundamental do Cálculo teste
+Teorema do Valor Intermediário: Seja $f:[a,b]\longrightarrow \mathbb{R}$ uma função contínua. Se $d$ está entre $f(a)$ e $f(b)$, então existe um ponto $c\in (a,b)$ tal que $f(c)=d$.
+Teorema do Valor Médio para Integrais: Seja $f:[a,b]\longrightarrow \mathbb{R}$ uma função contínua. Então existe $c\in (a,b)$ tal que $$f(c)=\frac{1}{b-a}\int_a^b f(x),dx.$$
+Demonstração: Como $f$ é contínua em $[a,b]$, pelo Teorema de Weierstrass, $f$ assume um valor máximo e um valor mínimo, isto é, existem $x_m$ e $x_M$ tais que $$f(x_m)=\min_{[a,b]}f(x)\ \text{ e }\ f(x_M)=\max_{[a,b]}f(x).</description>
+    </item>
+    
+    <item>
       <title>Hello R Markdown</title>
       <link>https://reginaldodr.github.io/blog/post/2020-12-01-r-rmarkdown/</link>
       <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
