@@ -1,0 +1,65 @@
+---
+title: Teorema Fundamental do Cálculo
+author: Reginaldo
+date: '2022-07-20'
+---
+
+# Teorema fundamental do Cálculo
+
+
+**Teorema do Valor Intermediário:** Seja $f:[a,b]\longrightarrow \mathbb{R}$ uma função contínua. Se $d$ está entre $f(a)$ e $f(b)$, então existe um ponto $c\in (a,b)$
+tal que $f(c)=d$.
+
+**Teorema do Valor Médio para Integrais:** Seja $f:[a,b]\longrightarrow \mathbb{R}$ uma função contínua. Então existe $c\in (a,b)$ tal que
+$$f(c)=\frac{1}{b-a}\int_a^b f(x)\,dx.$$
+
+**Demonstração:** Como $f$ é contínua em $[a,b]$, pelo Teorema de Weierstrass, $f$ assume um valor máximo e um valor mínimo, isto é, existem $x_m$ e $x_M$ tais que
+$$f(x_m)=\min_{[a,b]}f(x)\ \text{ e }\ f(x_M)=\max_{[a,b]}f(x).$$
+
+Assim,
+$$f(x_m)\leq f(x)\leq f(x_M),\ \forall x\in [a,b].$$
+
+Integrando, temos que
+
+$$\begin{align*}
+& \int_a^bf(x_m)\,dx \leq \int_a^bf(x)\,dx\leq \int_a^bf(x_M)\,dx\\
+ \Rightarrow & (b-a)f(x_m)\leq \int_a^bf(x)\,dx\leq (b-a)f(x_M)\\
+ \Rightarrow & f(x_m)\leq \frac{1}{b-a}\int_a^bf(x)\,dx\leq f(x_M).
+\end{align*}
+$$
+
+Assim, podemos ver que $\frac{1}{b-a}\int_a^bf(x)$ está entre $f(x_m)$ e $f(x_M)$. Pelo Teorema do Valor Intermediário, existe $c\in(x_m,x_M)\subset (a,b)$ tal que
+$$f(c)=\frac{1}{b-a}\int_a^b f(x)\,dx,$$
+como querímos.
+
+Agora estamos prontos para provar o *Teorema Fundamental do Cálculo*.
+
+**Teorema Fundamental do Cálculo**: Seja $f:[a,b]\longrightarrow$ uma função contínua. Se $F'=f$, então 
+$$\int_a^b f(x)\,dx=F(b)-F(a).$$
+
+**Demonstração:** Defina a função 
+$$G(x)=\int_a^x f(s)\, ds,\ x\in [a,b].$$
+
+Vamos provar que $G$ é derivável e que $G'(x)=f(x)$.
+
+De fato,
+$$G(x+h)-G(x)=\int_a^{x+h} f(s)\, ds -\int_a^x f(s)\,ds =\int_x^{x+h} f(s)\,ds\Rightarrow \frac{G(x+h)-G(x)}{h}=\frac{1}{h}\int_x^{x+h}f(s)\,ds.$$
+
+Pelo Teorema do Valor Médio para Integrais, para cada $h>0$, existe $x_h\in (x,x+h)$ tal que 
+
+$$\frac{G(x+h)-G(x)}{h}=\frac{1}{h}\int_x^{x+h}f(s)\,ds=f(x_h).$$
+
+Donde,
+
+$$\lim_{h\to 0^+}\frac{G(x+h)-G(x)}{h}=\lim_{h\to 0^+}\frac{1}{h}\int_x^{x+h}f(s)\,ds=\lim_{h\to 0^+}f(x_h)=f(x).$$
+
+Analogamente, se $h<0$, faça $k=-h>0$ e teremos
+
+$$\lim_{h\to 0^-}\frac{G(x+h)-G(x)}{h}=\lim_{k\to 0^+}\frac{G(x-k)-G(x)}{-k}\lim_{k\to 0^+}\frac{1}{k}\int_{x-k}^{x}f(s)\,ds=\lim_{k\to 0^+}f(x_k)=f(x).$$
+
+O que mostra que $G'(x)=f(x)$. Por fim, como $G'(x)=f(x)=F'(x)$, $F$ e $G$ diferem por uma constante, isto é, $G(x)=F(x)+c$ para todo $x\in [a,b]$. Em particular,
+$F(a)+c=G(a)=0$, daí, $c=-F(a)$. Assim, $G(x)=F(x)-F(a)$. Em particular, para $x=b$, temos que
+
+$$\int_a^b f(x)\, dx=G(b)=F(b)-F(a).$$
+
+
